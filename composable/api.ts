@@ -1,10 +1,14 @@
+import { useToast } from "@/components/ui/toast";
+import type { IResponse } from "@/model/response";
+
 export function $api<T>(
   request: Parameters<typeof $fetch<T>>[0],
   opts?: Parameters<typeof $fetch<T>>[1]
 ) {
   const { token, isAuthenticated } = useAuthStore();
+  const { toast } = useToast();
 
-  return $fetch<T>(request, {
+  const fetch = $fetch<T>(request, {
     baseURL: "https://belaundry-api.sebaris.link/platform",
     ...opts,
     headers: {
@@ -12,4 +16,14 @@ export function $api<T>(
       ...opts?.headers,
     },
   });
+
+  fetch.then((res: any) => {
+    toast({
+      title: "Error",
+      description: res.message,
+      variant: "destructive",
+    });
+  });
+
+  return fetch;
 }
