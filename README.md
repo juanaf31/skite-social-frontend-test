@@ -7,9 +7,10 @@ A scalable web application built with Nuxt 3 and TypeScript, showcasing best pra
 1. [Overview](#overview)
 2. [Features](#features)
 3. [Tech Stack](#tech-stack)
-4. [Getting Started](#getting-started)
-5. [Usage](#usage)
-6. [Project Structure](#project-structure)
+4. [Demo](#demo)
+5. [Getting Started](#getting-started)
+6. [Usage](#usage)
+7. [Project Structure](#project-structure)
 
 ---
 
@@ -33,6 +34,10 @@ This project is built with [Nuxt 3](https://nuxt.com/) and [TypeScript](https://
 - **Linting**: ESLint, Prettier
 - **Styling**: Tailwind CSS
 - **UI Component**: [shadcn-nuxt](https://www.shadcn-vue.com/docs/installation/nuxt)
+
+## Demo
+
+[Demo](https://skite-social-frontend-test.vercel.app)
 
 ## Getting Started
 
