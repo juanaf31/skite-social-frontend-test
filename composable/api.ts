@@ -18,11 +18,13 @@ export function $api<T>(
   });
 
   fetch.then((res: any) => {
-    toast({
-      title: "Error",
-      description: res.message,
-      variant: "destructive",
-    });
+    if (!res.status) {
+      toast({
+        title: "Error",
+        description: res.message,
+        variant: "destructive",
+      });
+    }
   });
 
   return fetch;
